@@ -12,3 +12,13 @@ ResNet50 is a deep residual network that contains 50 layers. It is known for its
 
 ### VGG16
 VGG16 is a deep convolutional neural network developed by the Visual Geometry Group at the University of Oxford. It consists of 16 layers and is known for its simplicity and effectiveness in image classification tasks. VGG16 has also been trained on the ImageNet dataset and has achieved excellent performance. This model is commonly used as a baseline for comparison in image classification research.
+
+## How to run the app
+
+1. Clone this repository to your local machine.
+2. Install the dependencies by running the following command:
+    - pip install -r requirements.txt
+3. Run the app using Streamlit by executing the following command:
+    - streamlit run app.py 
+
+This will start the application and open it in your browser.
