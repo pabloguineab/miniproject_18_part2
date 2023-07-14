@@ -22,3 +22,14 @@ VGG16 is a deep convolutional neural network developed by the Visual Geometry Gr
     - streamlit run app.py 
 
 This will start the application and open it in your browser.
+
+## How to use the app
+
+1. Once the app is running, you will see a sidebar on the left-hand side. The sidebar contains information about the application and the team members involved.
+2. In the sidebar, you will also find a selectbox labeled "Select Model". Use this selectbox to choose the deep learning model you want to use for image classification.
+3. After selecting the model, you can proceed to upload an image. Click on the "Browse" button and select an image file (JPG, PNG, or JPEG format) from your local machine.
+4. Once the image is uploaded, it will be displayed in the main area of the application.
+5. The app will process the image using the selected model and provide predictions for the image's class. The top predictions will be displayed along with their corresponding probabilities.
+6. You can use the slider labeled "Select the number of top predictions" to adjust the number of predictions you want to see.
+7. After the predictions are displayed, a random joke will be shown for a fun touch.
+8. If you upload another image, the process will repeat with the newly uploaded image.

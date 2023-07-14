@@ -45,3 +45,36 @@ def predict(image, model, top_k=3):
 # Function to get a random joke
 def get_random_joke():
     return pyjokes.get_joke()
+
+# Function for UI layout
+def run_app():
+    st.sidebar.image("George_Brown_College_logo.svg.png", use_column_width=True)
+    st.sidebar.header("About")
+    st.sidebar.info(
+        "This application is a demonstration of how to use "
+        "pre-trained models for image classification tasks using Streamlit and TensorFlow. "
+        "It uses various models, including MobileNetV2, ResNet50, and VGG16, which are trained on the ImageNet dataset. "
+        "The app will predict the class of the uploaded image out of 1000 classes. "
+    )
+    
+    st.sidebar.header("Team Members")
+    st.sidebar.text(
+        """
+        - Pablo Guinea Benito
+        - Joy
+        - Abdullah
+        - Sebastian
+        """
+    )
+    
+    # Create a selectbox widget to choose the model
+    st.sidebar.title("Select Model")
+    st.sidebar.markdown("Choose the model to use for image recognition:")
+    model_name = st.sidebar.selectbox("", list(model_dict.keys()))
+
+    model = load_model(model_name)
+
+    st.title("AI Image Recognizer")
+    st.header("Predict the class of an uploaded image")
+
+    file = st.file_uploader("Please upload an image", type=["jpg", "png", "jpeg"])
