@@ -105,5 +105,5 @@ def run_app():
 
         # Show balloons after submitting the image
         st.balloons()
-if _name_ == "_main_":
+if __name__ == "__main__":
     run_app()
