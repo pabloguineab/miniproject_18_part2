@@ -41,4 +41,5 @@ This will start the application and open it in your browser.
 ![Screenshot](shootscreen2.png)
 ![Screenshot](shootscreen3.png)
 
-Interact with the app: [AI Image Recognizer](miniproject18part2.streamlit.app/)
+Interact with the app: [AI Image Recognizer](https://miniproject18part2.streamlit.app/)
+
