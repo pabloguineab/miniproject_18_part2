@@ -33,3 +33,12 @@ This will start the application and open it in your browser.
 6. You can use the slider labeled "Select the number of top predictions" to adjust the number of predictions you want to see.
 7. After the predictions are displayed, a random joke will be shown for a fun touch.
 8. If you upload another image, the process will repeat with the newly uploaded image.
+
+## Screenshot
+
+![Screenshot](shootscreen1.png)
+![Screenshot](shoot.png)
+![Screenshot](shootscreen2.png)
+![Screenshot](shootscreen3.png)
+
+Interact with the app: [AI Image Recognizer](https://miniproject-g18.streamlit.app/)

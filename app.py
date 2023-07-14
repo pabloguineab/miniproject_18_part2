@@ -78,3 +78,33 @@ def run_app():
     st.header("Predict the class of an uploaded image")
 
     file = st.file_uploader("Please upload an image", type=["jpg", "png", "jpeg"])
+
+
+    if file is not None:
+        image = Image.open(file)
+        st.image(image, use_column_width=True)
+
+        # Display image metadata
+        image_info = f"Image size: {image.size[0]}x{image.size[1]} pixels"
+        st.info(image_info)
+
+        # Allow users to select the number of top predictions
+        num_predictions = st.slider("Select the number of top predictions", 1, 10, 3)
+
+        with st.spinner("Processing image..."):
+            predictions = predict(image, model, top_k=num_predictions)
+
+        st.subheader("Predictions:")
+        for i, (class_name, description, score) in enumerate(predictions, start=1):
+            st.write(f"{i}. {class_name} ({description}): {score:.2%}")
+
+        # Show random joke
+        st.info("Here's a random joke for you:")
+        joke = get_random_joke()
+        st.write(joke)
+
+        # Show balloons after submitting the image
+        st.balloons()
+
+if _name_ == "_main_":
+    run_app()
